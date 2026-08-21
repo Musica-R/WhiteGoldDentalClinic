@@ -1,0 +1,11 @@
+.home {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  overflow-x: hidden;
+}
+
+.home .services-preview,
+.home .cta {
+  margin: 0 auto;
+}

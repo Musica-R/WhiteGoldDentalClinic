@@ -1,0 +1,87 @@
+.cta {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.cta__banner {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--radius-lg);
+  background: linear-gradient(110deg, var(--teal-dark), var(--navy) 75%);
+  padding: 52px 6vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+  min-height: 220px;
+}
+
+.new {
+  margin-top: 100px;
+}
+
+.cta__icon {
+  color: var(--white);
+  font-size: 1.9rem;
+  margin-bottom: 14px;
+}
+
+.cta__copy h2 {
+  color: var(--white);
+  font-size: clamp(1.4rem, 2.2vw, 1.9rem);
+  margin-bottom: 8px;
+  max-width: 18ch;
+}
+
+.cta__copy p {
+  color: #d8ecec;
+}
+
+.cta__button {
+  position: relative;
+  z-index: 2;
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.cta__button-icon {
+  font-size: 1rem;
+}
+
+.cta__photo {
+  position: absolute;
+  right: 4vw;
+  bottom: 0;
+  height: 100%;
+  width: 260px;
+  object-fit: cover;
+  object-position: top;
+  mask-image: linear-gradient(to left, black 55%, transparent 95%);
+  -webkit-mask-image: linear-gradient(to left, black 55%, transparent 95%);
+  opacity: 0.9;
+  display: none;
+}
+
+.sec {
+  padding: 16px 8vw 96px 8vw;
+}
+
+@media (min-width: 900px) {
+  .cta__photo {
+    display: block;
+  }
+}
+
+@media (max-width: 700px) {
+  .cta__banner {
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .new {
+    margin-top: 0px;
+  }
+}

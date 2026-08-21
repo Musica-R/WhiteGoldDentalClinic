@@ -1,0 +1,636 @@
+/* ===========================================================
+   White Gold Dental Clinic — Footer
+   Namespaced under .wg-footer to avoid collisions with other
+   components. Uses the global design tokens from :root
+   (--navy-deep, --teal, --gold, etc). Add this file's import
+   AFTER the tokens file so the variables are already defined.
+   =========================================================== */
+
+.wg-footer {
+  font-family: var(--font-body);
+  background: var(--navy-deep);
+}
+
+/* -----------------------------------------------------------
+   CTA banner
+   ----------------------------------------------------------- */
+.wg-footer__cta {
+  padding: 0 8vw;
+  margin-top: -1px;
+}
+
+.wg-footer__cta-inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  transform: translateY(-40px);
+  background: linear-gradient(120deg, var(--teal-dark), var(--navy) 85%);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lift);
+  padding: 32px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.wg-footer__cta-left {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.wg-footer__cta-icon {
+  flex-shrink: 0;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  color: var(--white);
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+}
+
+.wg-footer__cta-icon--outline {
+  background: transparent;
+}
+
+.wg-footer__cta-left h3 {
+  color: var(--white);
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin: 0 0 6px;
+}
+
+.wg-footer__cta-left p {
+  color: rgba(255, 255, 255, 0.82);
+  font-size: 0.92rem;
+  max-width: 46ch;
+  margin: 0;
+}
+
+.wg-footer__cta-right {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  text-decoration: none;
+  padding-left: 24px;
+  border-left: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.wg-footer__cta-text {
+  color: var(--white);
+  font-weight: 600;
+  font-size: 1.05rem;
+  white-space: nowrap;
+}
+
+.wg-footer__cta-arrow {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--teal);
+  color: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.wg-footer__cta-right:hover .wg-footer__cta-arrow {
+  background: var(--gold);
+  transform: translateX(4px);
+}
+
+/* -----------------------------------------------------------
+   Main footer grid
+   ----------------------------------------------------------- */
+.wg-footer__main {
+  padding: 0 8vw 40px;
+}
+
+.wg-footer__inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.3fr 0.85fr 1.6fr 1.1fr;
+  gap: 48px;
+  padding-bottom: 40px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* --- Brand column --- */
+.wg-footer__logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 1rem;
+  letter-spacing: 0.06em;
+  color: var(--white);
+  text-decoration: none;
+  margin-bottom: 18px;
+}
+
+.wg-footer__logo-icon {
+  font-size: 1.9rem;
+  color: var(--gold);
+}
+
+.wg-footer__logo strong {
+  color: var(--gold);
+}
+
+.wg-footer__logo small {
+  display: block;
+  font-family: var(--font-body);
+  font-size: 0.6rem;
+  font-weight: 500;
+  letter-spacing: 0.24em;
+  color: #90a4b7;
+}
+
+.wg-footer__brand > p {
+  max-width: 36ch;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: #b9c8d6;
+  margin: 0 0 24px;
+}
+
+.wg-footer__features {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.wg-footer__features li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 0.88rem;
+  color: #dbe6ee;
+}
+
+.wg-footer__feature-icon {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  border: 1px solid var(--teal);
+  color: var(--teal);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.9rem;
+  flex-shrink: 0;
+}
+
+/* --- Generic column headings --- */
+.wg-footer__col h4 {
+  color: var(--teal);
+  font-family: var(--font-display);
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  margin: 0 0 18px;
+  padding-bottom: 12px;
+  position: relative;
+}
+
+.wg-footer__col h4::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 30px;
+  height: 2px;
+  background: var(--teal);
+}
+
+/* --- Explore column --- */
+.wg-footer__col--explore ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.wg-footer__col--explore li {
+  border-bottom: 1px dashed rgba(255, 255, 255, 0.06);
+}
+
+.wg-footer__col--explore li:last-child {
+  border-bottom: none;
+}
+
+.wg-footer__col--explore a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 11px 0;
+  font-size: 0.88rem;
+  color: #dbe6ee;
+  text-decoration: none;
+  transition: color 0.2s ease, padding-left 0.2s ease;
+}
+
+.wg-footer__col--explore a:hover {
+  color: var(--gold-soft);
+  padding-left: 4px;
+}
+
+.wg-footer__chevron {
+  font-size: 0.68rem;
+  color: var(--teal);
+  flex-shrink: 0;
+}
+
+/* --- Services column --- */
+.wg-footer__services-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0 24px;
+}
+
+.wg-footer__services-grid ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.wg-footer__services-grid li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.85rem;
+  color: #dbe6ee;
+  padding: 9px 0;
+  line-height: 1.3;
+}
+
+.wg-footer__tooth {
+  color: var(--teal);
+  font-size: 0.85rem;
+  flex-shrink: 0;
+}
+
+/* --- Contact column --- */
+.wg-footer__contact-list {
+  list-style: none;
+  margin: 0 0 20px;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.wg-footer__contact-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.wg-footer__contact-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 1px solid var(--teal);
+  color: var(--teal);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.78rem;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+.wg-footer__contact-list a {
+  font-size: 0.86rem;
+  color: #dbe6ee;
+  text-decoration: none;
+  line-height: 1.5;
+  transition: color 0.2s ease;
+}
+
+.wg-footer__contact-list a:hover {
+  color: var(--gold-soft);
+}
+
+.wg-footer__hours {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: var(--radius-md);
+  padding: 18px;
+}
+
+.wg-footer__hours-icon {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  border: 1px solid var(--teal);
+  color: var(--teal);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  flex-shrink: 0;
+}
+
+.wg-footer__hours-title {
+  display: block;
+  color: var(--teal);
+  font-size: 0.82rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.wg-footer__hours p {
+  margin: 0 0 4px;
+  font-size: 0.82rem;
+  color: #dbe6ee;
+}
+
+.wg-footer__hours p strong {
+  color: var(--white);
+  font-weight: 500;
+}
+
+/* -----------------------------------------------------------
+   Bottom bar
+   ----------------------------------------------------------- */
+.wg-footer__bottom {
+  padding: 0 8vw;
+}
+
+.wg-footer__bottom-inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 22px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.wg-footer__copy {
+  font-size: 0.8rem;
+  color: #7f92a3;
+}
+
+.wg-footer__legal {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
+.wg-footer__legal a {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.82rem;
+  color: #b9c8d6;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.wg-footer__legal a:hover {
+  color: var(--gold-soft);
+}
+
+.wg-footer__social {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.wg-footer__social-label {
+  font-size: 0.82rem;
+  color: #b9c8d6;
+  margin-right: 4px;
+}
+
+.wg-footer__social-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  color: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.85rem;
+  text-decoration: none;
+  transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+}
+
+.wg-footer__social-icon:hover {
+  background: var(--teal);
+  border-color: var(--teal);
+  color: var(--white);
+}
+
+/* ===========================================================
+   RESPONSIVE BREAKPOINTS
+   =========================================================== */
+
+/* ----- 1024px: 3-column grid, brand spans full width ----- */
+@media (max-width: 1024px) {
+  .wg-footer__inner {
+    grid-template-columns: 1fr 1fr 1fr;
+    row-gap: 40px;
+  }
+
+  .wg-footer__brand {
+    grid-column: 1 / -1;
+  }
+
+  .wg-footer__brand > p {
+    max-width: 60ch;
+  }
+
+  .wg-footer__features {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 18px 28px;
+  }
+
+  .wg-footer__cta-inner {
+    padding: 28px 32px;
+  }
+}
+
+/* ----- 768px: 2-column grid ----- */
+@media (max-width: 768px) {
+  .wg-footer__cta {
+    padding: 0 6vw;
+  }
+
+  .wg-footer__cta-inner {
+    transform: translateY(-28px);
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 26px 26px;
+  }
+
+  .wg-footer__cta-right {
+    border-left: none;
+    padding-left: 0;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.25);
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .wg-footer__main {
+    padding: 0 6vw 32px;
+  }
+
+  .wg-footer__inner {
+    grid-template-columns: 1fr 1fr;
+    gap: 36px 28px;
+  }
+
+  .wg-footer__col--services {
+    grid-column: 1 / -1;
+  }
+
+  .wg-footer__bottom {
+    padding: 0 6vw;
+  }
+
+  .wg-footer__bottom-inner {
+    justify-content: flex-start;
+  }
+
+  .wg-footer__legal {
+    order: 3;
+    width: 100%;
+    justify-content: flex-start;
+    gap: 24px;
+  }
+}
+
+/* ----- 520px: single column, services stay 2-up ----- */
+@media (max-width: 520px) {
+  .wg-footer__cta-inner {
+    border-radius: var(--radius-md);
+    padding: 22px;
+  }
+
+  .wg-footer__cta-left {
+    align-items: flex-start;
+  }
+
+  .wg-footer__cta-icon {
+    width: 46px;
+    height: 46px;
+    font-size: 1.15rem;
+  }
+
+  .wg-footer__cta-left h3 {
+    font-size: 1.15rem;
+  }
+
+  .wg-footer__cta-left p {
+    font-size: 0.85rem;
+  }
+
+  .wg-footer__inner {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .wg-footer__col--services {
+    grid-column: auto;
+  }
+
+  .wg-footer__services-grid {
+    gap: 0 16px;
+  }
+
+  .wg-footer__contact-list a {
+    word-break: break-word;
+  }
+
+  .wg-footer__bottom-inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
+  }
+
+  .wg-footer__legal {
+    order: 0;
+    gap: 20px;
+  }
+
+  .wg-footer__social {
+    order: 1;
+  }
+
+  .wg-footer__copy {
+    order: 2;
+  }
+}
+
+/* ----- 350px: tightest layout, services collapse to 1 column ----- */
+@media (max-width: 350px) {
+  .wg-footer__cta {
+    padding: 0 5vw;
+  }
+
+  .wg-footer__cta-inner {
+    padding: 18px;
+  }
+
+  .wg-footer__cta-text {
+    font-size: 0.92rem;
+  }
+
+  .wg-footer__cta-arrow {
+    width: 38px;
+    height: 38px;
+  }
+
+  .wg-footer__main {
+    padding: 0 5vw 28px;
+  }
+
+  .wg-footer__logo {
+    font-size: 0.88rem;
+  }
+
+  .wg-footer__logo-icon {
+    font-size: 1.6rem;
+  }
+
+  .wg-footer__services-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .wg-footer__hours {
+    flex-direction: column;
+  }
+
+  .wg-footer__legal {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .wg-footer__social {
+    flex-wrap: wrap;
+  }
+}

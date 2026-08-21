@@ -1,0 +1,440 @@
+/* ===========================================================
+   About section — White Gold Dental Clinic
+   Namespace: about__  |  uses shared :root tokens + .eyebrow/.section
+   =========================================================== */
+
+.about {
+  background: var(--bg);
+  padding: 80px 24px;
+  overflow: hidden;
+}
+
+.about__inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 0.92fr 1.08fr;
+  gap: 64px;
+  align-items: start;
+}
+
+/* ---------------- LEFT: media ---------------- */
+
+.about__media {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.about__photo-card {
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-lift);
+  background: var(--navy-deep);
+}
+
+.about__photo-card img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 3.3;
+  object-fit: cover;
+}
+
+.about__badges {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  background: var(--navy-deep);
+  padding: 22px 24px;
+}
+
+.about__badge {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 8px;
+}
+
+.about__badge-icon {
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  border: 1.5px solid var(--gold-soft);
+  color: var(--gold-soft);
+  font-size: 1.15rem;
+}
+
+.about__badge strong {
+  font-family: var(--font-display);
+  color: var(--gold-soft);
+  font-size: 1.05rem;
+  font-weight: 700;
+  letter-spacing: 0.2px;
+}
+
+.about__badge-label {
+  color: #c9d6e3;
+  font-size: 0.78rem;
+  line-height: 1.35;
+  max-width: 130px;
+}
+
+.about__cta {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  background: var(--bg-soft);
+  border-radius: var(--radius-md);
+  padding: 18px 22px;
+  flex-wrap: wrap;
+}
+
+.about__cta-icon {
+  position: relative;
+  flex-shrink: 0;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: var(--teal);
+  color: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+}
+
+.about__cta-check {
+  position: absolute;
+  bottom: -2px;
+  right: -2px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: var(--gold);
+  color: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.6rem;
+  border: 2px solid var(--bg-soft);
+}
+
+.about__cta-text {
+  flex: 1;
+  min-width: 180px;
+}
+
+.about__cta-text h4 {
+  margin: 0 0 4px;
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--ink);
+}
+
+.about__cta-text p {
+  margin: 0;
+  font-size: 0.85rem;
+  color: var(--body);
+  line-height: 1.4;
+}
+
+.about__cta-btn {
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--teal-dark);
+  color: var(--white);
+  font-weight: 600;
+  font-size: 0.9rem;
+  padding: 12px 20px;
+  border-radius: 999px;
+  white-space: nowrap;
+  text-decoration: none;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.about__cta-btn:hover {
+  background: var(--navy);
+  transform: translateX(2px);
+}
+
+/* ---------------- RIGHT: copy ---------------- */
+
+.about__copy {
+  padding-top: 4px;
+}
+
+.about__copy h2 {
+  margin: 0 0 18px;
+  font-family: var(--font-display);
+  font-size: clamp(1.75rem, 2.8vw, 2.5rem);
+  font-weight: 800;
+  color: var(--ink);
+  line-height: 1.2;
+}
+
+.about__copy h2 span {
+  color: var(--teal-dark);
+}
+
+.about__role {
+  display: inline-block;
+  background: linear-gradient(135deg, var(--gold-soft), var(--gold));
+  color: var(--white);
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 0.92rem;
+  padding: 10px 20px;
+  border-radius: 999px;
+  margin: 0 0 22px;
+}
+
+.about__desc {
+  margin: 0 0 16px;
+  color: var(--body);
+  font-size: 1rem;
+  line-height: 1.7;
+  max-width: 60ch;
+}
+
+.about__location {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  margin: 4px 0 32px;
+  color: var(--teal-dark);
+  font-weight: 600;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.about__location svg {
+  flex-shrink: 0;
+  font-size: 1.2rem;
+  margin-top: 1px;
+}
+
+.about__features {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+.about__feature {
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  padding: 24px 18px;
+  text-align: center;
+  box-shadow: var(--shadow-card);
+}
+
+.about__feature-icon {
+  width: 52px;
+  height: 52px;
+  margin: 0 auto 14px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--teal), var(--teal-dark));
+  color: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+}
+
+.about__feature h3 {
+  margin: 0 0 8px;
+  font-family: var(--font-display);
+  font-size: 0.98rem;
+  font-weight: 700;
+  color: var(--teal-dark);
+  line-height: 1.3;
+}
+
+.about__feature p {
+  margin: 0;
+  font-size: 0.82rem;
+  color: var(--body);
+  line-height: 1.45;
+}
+
+/* ===========================================================
+   Responsive breakpoints: 1024px, 768px, 520px, 350px
+   =========================================================== */
+
+@media (max-width: 1024px) {
+  .about {
+    padding: 64px 20px;
+  }
+
+  .about__inner {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .about__copy {
+    padding-top: 0;
+  }
+
+  .about__desc,
+  .about__location {
+    max-width: none;
+  }
+
+  .about__features {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .about {
+    padding: 56px 18px;
+  }
+
+  .about__photo-card img {
+    aspect-ratio: 4 / 3;
+  }
+
+  .about__badges {
+    padding: 18px;
+  }
+
+  .about__badge-label {
+    max-width: 110px;
+  }
+
+  .about__cta {
+    padding: 16px 18px;
+  }
+
+  .about__cta-btn {
+    margin-left: auto;
+  }
+
+  .about__features {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+  }
+}
+
+@media (max-width: 520px) {
+  .about {
+    padding: 44px 14px;
+  }
+
+  .about__photo-card {
+    border-radius: var(--radius-md);
+  }
+
+  .about__photo-card img {
+    aspect-ratio: 4 / 3.6;
+  }
+
+  .about__badges {
+    flex-direction: column;
+    gap: 16px;
+    padding: 18px 16px;
+  }
+
+  .about__badge {
+    flex-direction: row;
+    text-align: left;
+    justify-content: flex-start;
+    gap: 12px;
+  }
+
+  .about__badge-label {
+    max-width: none;
+  }
+
+  .about__badge-icon {
+    width: 38px;
+    height: 38px;
+    font-size: 1rem;
+    flex-shrink: 0;
+  }
+
+  .about__cta {
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .about__cta-btn {
+    width: 100%;
+    justify-content: center;
+    margin-left: 0;
+  }
+
+  .about__copy h2 {
+    font-size: 1.6rem;
+  }
+
+  .about__role {
+    font-size: 0.85rem;
+    padding: 9px 16px;
+  }
+
+  .about__desc {
+    font-size: 0.94rem;
+  }
+
+  .about__features {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+
+  .about__feature {
+    padding: 18px 12px;
+  }
+}
+
+@media (max-width: 350px) {
+  .about {
+    padding: 36px 12px;
+  }
+
+  .about__badge strong {
+    font-size: 0.92rem;
+  }
+
+  .about__badge-label {
+    font-size: 0.72rem;
+  }
+
+  .about__cta-text h4 {
+    font-size: 0.98rem;
+  }
+
+  .about__cta-text p {
+    font-size: 0.8rem;
+  }
+
+  .about__copy h2 {
+    font-size: 1.4rem;
+  }
+
+  .about__features {
+    grid-template-columns: 1fr;
+  }
+
+  .about__feature {
+    display: flex;
+    align-items: center;
+    text-align: left;
+    gap: 14px;
+    padding: 14px;
+  }
+
+  .about__feature-icon {
+    margin: 0;
+    flex-shrink: 0;
+  }
+}

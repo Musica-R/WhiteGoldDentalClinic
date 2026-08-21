@@ -1,0 +1,84 @@
+.clinic__inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 56px;
+  align-items: center;
+}
+
+.clinic__info h2 {
+  font-size: clamp(1.5rem, 2.3vw, 2rem);
+  margin-bottom: 26px;
+  max-width: 22ch;
+}
+
+.clinic__details {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  margin-bottom: 28px;
+}
+
+.clinic__details li {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+  color: var(--body);
+}
+
+.clinic__details svg {
+  flex-shrink: 0;
+  color: var(--teal-dark);
+  margin-top: 2px;
+}
+
+.clinic__details a {
+  color: var(--ink);
+  font-weight: 600;
+}
+
+.clinic__facilities {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 32px;
+}
+
+.clinic__facilities span {
+  font-size: 0.78rem;
+  font-weight: 500;
+  padding: 8px 14px;
+  border-radius: 999px;
+  background: var(--bg-soft);
+  color: var(--navy);
+  border: 1px solid var(--line);
+}
+
+.clinic__actions {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.clinic__map {
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-card);
+  aspect-ratio: 4 / 3.4;
+  border: 1px solid var(--line);
+}
+
+.clinic__map iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+
+
+@media (max-width: 900px) {
+  .clinic__inner {
+    grid-template-columns: 1fr;
+  }
+}
