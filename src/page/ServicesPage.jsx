@@ -14,6 +14,7 @@ const FACILITIES = [
   'Mental Health Unit',
 ];
 
+
 export default function ServicesPage() {
   return (
     <main className="services-page">

@@ -373,8 +373,11 @@
 
   .specialty-card__arrow {
     right: 20px;
-    bottom: 18px;
+    bottom: 10px;
+    width: 28px;
+    height: 28px;
   }
+  
 
   .specialties__cta {
     border-radius: 24px;
